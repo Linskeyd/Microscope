@@ -1,8 +1,15 @@
 <template name="layout">
 	<div class="container">
-		{{>header}}
+		{{> header}}
+		{{> errors}}
 		<div id="main" class="row-fluid">
 			{{yield}}
 		</div>
 	</body>
+</template>
+
+<template name="error">
+  <div class="alert alert-error">
+    <button type="button" class="close" data-dismiss="alert">&times;</button>
+  </div>
 </template>
